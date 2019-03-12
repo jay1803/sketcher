@@ -1,18 +1,25 @@
 {
+  "name": "Sketcher",
+  "description": "maxOS plugin",
+  "author": "maxOS",
+  "homepage": "https://github.com/jay1803/sketcher",
+  "version": "1.0",
   "compatibleVersion": 3,
   "bundleVersion": 1,
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "sketcher.my-command-identifier",
-      "script": "./my-command.js"
+      "name": "Disable All Overwrite of This Symbol",
+      "identifier": "sketcher.disable-all-overwrite-of-this-symbol",
+      "handler": "disableAllOverwriteOfSelectedSymbol",
+      "shortcut": "shift ctrl alt d",
+      "script": "./functions.js"
     }
   ],
   "menu": {
     "title": "sketcher",
     "items": [
-      "sketcher.my-command-identifier"
+      "sketcher.disable-all-overwrite-of-this-symbol"
     ]
   }
 }
