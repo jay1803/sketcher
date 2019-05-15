@@ -1,25 +1,123 @@
 {
-  "name": "Sketcher",
-  "description": "maxOS plugin",
-  "author": "maxOS",
-  "homepage": "https://github.com/jay1803/sketcher",
-  "version": "1.0",
-  "compatibleVersion": 3,
-  "bundleVersion": 1,
-  "icon": "icon.png",
-  "commands": [
-    {
-      "name": "Disable All Overwrite of This Symbol",
-      "identifier": "sketcher.disable-all-overwrite-of-this-symbol",
-      "handler": "disableAllOverwriteOfSelectedSymbol",
-      "shortcut": "shift ctrl alt d",
-      "script": "./functions.js"
-    }
-  ],
-  "menu": {
-    "title": "sketcher",
-    "items": [
-      "sketcher.disable-all-overwrite-of-this-symbol"
-    ]
-  }
+	"name": "Sketcher",
+	"description": "maxOS plugin",
+	"author": "maxOS",
+	"homepage": "https://github.com/jay1803/sketcher",
+	"version": "1.0",
+	"compatibleVersion": 3,
+	"bundleVersion": 1,
+	"icon": "icon.png",
+	"commands": [{
+			"name": "Disable All Overwrite",
+			"identifier": "sketcher.disableAllOverwriteOfSelectedSymbol",
+			"handler": "disableAllOverwriteOfSelectedSymbol",
+			"shortcut": "shift ctrl alt d",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Reorder Layers Vertical",
+			"identifier": "sketcher.reorderLayerVertical",
+			"handler": "reorderLayerVertical",
+			"shortcut": "shift ctrl alt v",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Reorder Layers Horizon",
+			"identifier": "sketcher.reorderLayerHorizon",
+			"handler": "reorderLayerHorizon",
+			"shortcut": "shift ctrl alt h",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Resize Background",
+			"identifier": "sketcher.resizeBackground",
+			"handler": "resizeBackground",
+			"shortcut": "shift ctrl alt b",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Rename Layer by Index",
+			"identifier": "sketcher.renameLayerByIndex",
+			"handler": "renameLayerByIndex",
+			"shortcut": "shift ctrl alt i",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Fixed",
+			"identifier": "sketcher.fixedResize",
+			"handler": "fixedResize",
+			"shortcut": "shift ctrl alt f",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Reorder Flow Folder",
+			"identifier": "sketcher.reorderTaskFlowFolder",
+			"handler": "reorderTaskFlowFolder",
+			"shortcut": "shift ctrl alt o",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Reorder Flow Page",
+			"identifier": "sketcher.reorderTaskFlowPage",
+			"handler": "reorderTaskFlowPage",
+			"shortcut": "shift ctrl alt p",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Duplicate Task Flow Page",
+			"identifier": "sketcher.duplicateTaskFlow",
+			"handler": "duplicateTaskFlow",
+			"shortcut": "",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Reorder Page",
+			"identifier": "sketcher.reorderPage",
+			"handler": "reorderPage",
+			"shortcut": "",
+			"script": "./commands.js"
+		},
+		{
+			"name": "Check Spacing",
+			"identifier": "sketcher.checkSpacing",
+			"handler": "checkSpacing",
+			"shortcut": "",
+			"script": "./commands.js"
+		}
+	],
+	"menu": {
+		"title": "sketcher",
+		"items": [{
+				"title": "Basic",
+				"items": [
+					"sketcher.disableAllOverwriteOfSelectedSymbol",
+					"sketcher.reorderLayerVertical",
+					"sketcher.reorderLayerHorizon",
+					"sketcher.renameLayerByIndex",
+					"sketcher.resizeBackground",
+					"sketcher.duplicateTaskFlow",
+					"sketcher.reorderPage"
+				]
+			},
+			{
+				"title": "Resizing",
+				"items": [
+					"skethcer.fixedResize"
+				]
+			},
+			{
+				"title": "Check",
+				"items": [
+					"sketcher.checkSpacing"
+				]
+			},
+			{
+				"title": "Folder",
+				"items": [
+					"skethcer.reorderTaskFlowFolder",
+					"skethcer.reorderTaskFlowPage"
+				]
+			}
+		]
+	}
 }
